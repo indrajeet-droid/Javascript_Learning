@@ -19,4 +19,26 @@ getData(1, () => {
     });
   });
 });
+
+
+//basic promise
+const getPromise = () => {
+  return new Promise((res, rej) => {
+    console.log("I am promise");
+    rej("Success");
+  });
+};
+
+let promise = getPromise();
+promise.then((res) => {
+  console.log("Promise fulfilled");
+});
+
+promise.catch((err) => {
+  console.log("Promise Failed", err);
+});
+
+
+
+
 ```
